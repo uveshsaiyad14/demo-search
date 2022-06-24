@@ -14,6 +14,12 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "paths": {
+      "sa-anguler-search": [
+        "dist/sa-anguler-search/sa-anguler-search",
+        "dist/sa-anguler-search"
+      ]
+    },
     "target": "es2017",
     "module": "es2020",
     "lib": [

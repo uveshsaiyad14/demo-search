@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo-search';
+
+  search(event: any) {
+    console.log('event.target.value', event.target.value);
+  }
 }

@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "36d089f2-6d5b-4c94-8ffd-632ddbc932fd"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -102,6 +105,37 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        }
+      }
+    },
+    "sa-anguler-search": {
+      "projectType": "library",
+      "root": "projects/sa-anguler-search",
+      "sourceRoot": "projects/sa-anguler-search/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/sa-anguler-search/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sa-anguler-search/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sa-anguler-search/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/sa-anguler-search/src/test.ts",
+            "tsConfig": "projects/sa-anguler-search/tsconfig.spec.json",
+            "karmaConfig": "projects/sa-anguler-search/karma.conf.js"
           }
         }
       }
